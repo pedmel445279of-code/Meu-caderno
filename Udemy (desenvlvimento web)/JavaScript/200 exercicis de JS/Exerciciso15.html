@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input  type="text" name="verificação_polidromo" id="campoTexto">
+    <button onclick="polindromo()" type="button" id="enviar">Verificar</button>
+</body>
+<script>
+    function polindromo(){
+        let palavra = document.getElementById('campoTexto').value
+            if(!isNaN(palavra)){
+                alert('Digite apenas palavras')
+            } else {
+                if (palavra == palavra.split('').reverse().join('')){
+                    document.write("A palavra " + " é um poríndromo")
+                } else {
+                    document.write("A palavra " + " não é um poríndromo")
+                }
+            }
+    }
+//.reverse()
+//.split('')
+//.join('')
+</script>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div id="açoes" style="border: 1px solid black;margin: 20px;padding: 15px;">
+            <input id="campoTexto" type="text"  placeholder="Cadeira">
+            <button id="adicionar" onclick="adicionar()">Adicionar</button>
+            <button id="ordenar" onclick="Ordenar()" >Ordenar</button>
+        </div>
+    </div>
+</body>
+<script>
+        //Array
+    let objetos = ['cadeira', 'Impressora', 'Garfo'];
+    function adicionar(){
+        if(document.getElementById('campoTexto').value == ""){
+            //erro
+            alert("Infome um valor válido");
+        } else if(objetos.includes(document.getElementById('campoTexto').value)){
+            //erro
+            alert("Objeto já foi adionado");
+        } else {
+            //adiciona no aray
+            objetos.push(document.getElementById('campoTexto').value);
+            console.log(objetos);
+            //limpa campo
+            document.getElementById('campoTexto').value = ""
+        }    
+    }
+    function Ordenar(){
+        objetos.sort();
+        console.log(objetos)
+    }
+</script>
+</html>
+
+
+
+
+

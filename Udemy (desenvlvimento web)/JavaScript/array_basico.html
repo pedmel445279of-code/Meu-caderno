@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+   
+    
+</body>
+
+<script>
+
+    //formas de fazer o Array:
+
+    //1) Aqui tem duas formas de voce dizer que é um array:
+    //let list_frutas = Array()
+    let list_frutas = [] //(Mais usada)
+
+
+    list_frutas[0]= "uva"
+    list_frutas[1]= "melancia"
+    list_frutas[2]= "melão"
+    list_frutas[3]= "pera"
+    list_frutas[4]= "mexirica"
+    list_frutas[5]= "maça"
+    list_frutas[6]= "banana"
+
+    document.write(list_frutas)  //Dessa forma voce chama a lista inteira;
+    document.write(list_frutas[0]) //Aqui voce chama um elemento em especifico. O elemento tem que ficar colchetes;
+    document.write(list_frutas[4]) //Aqui voce chama um elemento em especifico;
+    
+    //2) Aqui voce ja resumo o aray sem precisar criar uma tabela enorme, já que não é numerado ele sempre começa do zero(0);
+
+    //let lista_cores = ["azul","bermelho","amarelo","roxo","rosa"];  //Uma forma mais resumida de escrever o Aray com os colchetes;
+    let lista_cores = Array("azul","bermelho","amarelo","roxo","rosa"); // Outra forma mais explicita dizendo que é um Aray;
+
+    console.log(lista_cores)
+
+    //--------------------------------------------
+
+    //Forma de colocar os Array dentro de um unico Array (Array multimensional):
+
+    let listTodosArray = [];
+
+    listTodosArray[0] = list_frutas
+    listTodosArray[1] = lista_cores
+
+    console.log(list_frutas, lista_cores)
+
+</script>
+
+</html>

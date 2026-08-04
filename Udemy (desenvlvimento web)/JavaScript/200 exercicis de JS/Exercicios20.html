@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="Containter">
+        <div>
+            <h1>Nome do aluno:</h1>
+            <input type="text" placeholder="Digite Aqui" id="nomeAluno"><br><br>
+            <div id="entradaNotas"style="padding:10px;">
+            <input type="text" name="Prova" id="notaProva" placeholder="Nota da prova"><br>
+            <input type="text" name="comportamento" id="notacomportamento"  placeholder="Nota dos trabalhos"><br>
+            <input type="text" name="trabalho" id="notaTrabalho"  placeholder="Nota de Comportamento">
+            </div><br><br>
+            <button onclick="Classificação()" id="enviarDados">Envie os dados do aluno</button>
+        </div>
+    </div>
+</body>
+<script>
+    function Classificação(Prova,Trabalho,Comportamento){
+        let nome = document.getElementById('nomeAluno').value //atenção o .value indentifica como uma string e nao indentifica numero como number
+        let a = Number(document.getElementById('notaProva').value)
+        let b = Number(document.getElementById('notaTrabalho').value)
+        let c = Number(document.getElementById('notacomportamento').value)
+        document.write(nome)
+        let resultado = (a+b+c)/2
+        if (resultado >= 8){
+            document.write("Nota A")
+        } else if (resultado >= 5 && resultado <= 7){
+            document.write("Nota B")
+        } else if (resultado >= 3 && resultado <= 4){
+            document.write("Nota E")
+        } else {
+            document.write("Nota F")
+        }
+    }
+</script>
+</html>
