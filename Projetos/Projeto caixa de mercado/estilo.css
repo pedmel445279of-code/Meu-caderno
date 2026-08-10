@@ -1,0 +1,10 @@
+body{
+    margin: 0;
+    background-color: bisque;
+}
+
+#produtos{
+    margin: 50px;
+    padding: 20px;
+    border: 1px solid black;
+}
