@@ -1,9 +1,7 @@
-let produtos = ['Arroz','Leite','Custela','Frango','Oleo','Miojo',]
+/*let produtos = ['Arroz','Leite','Custela','Frango','Oleo','Miojo',]*/
 
+let mais = 0
 function adicionar(){
-
-    let mais = document.getElementById('one')
-
-    
-
+    mais++
+   document.getElementById('contadorProdutos').textContent = mais
 }
