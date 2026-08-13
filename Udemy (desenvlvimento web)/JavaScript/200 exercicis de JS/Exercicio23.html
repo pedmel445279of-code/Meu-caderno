@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="container" style="border: 1px solid black; margin: 20px; padding: 20px;">
+        <div>
+            <button type="button" onclick="vermelho()">Vermelho</button>
+            <button type="button" onclick=" amarelao()">Amarelo</button>
+            <button type="button" onclick="verder()">Verde</button>
+        </div>
+    </div>
+    
+</body>
+<script>
+    function verder(){
+        document.getElementById('container').style.backgroundColor='green'
+    }
+    function amarelao(){
+        document.getElementById('container').style.backgroundColor='yellow'
+    }
+    function vermelho(){
+        document.getElementById('container').style.backgroundColor='red'
+    }
+
+</script>
+</html>
