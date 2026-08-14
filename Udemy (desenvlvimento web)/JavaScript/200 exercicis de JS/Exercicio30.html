@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+   
+   function primos(){
+    for(let a = 2; a <= 100; a++){
+        let primo = true
+        for(let b = 2; b < a; b++){
+            if(a % b === 0){
+                primo = false
+                break
+            }
+        }
+        if(primo === true){
+            document.write(a + '<br>')
+        }
+    }
+}
+primos()
+
+</script>
+</html>
