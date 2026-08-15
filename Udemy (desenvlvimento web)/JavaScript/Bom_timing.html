@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="tempoLimite()">Clonometro finito</button>
+    <button onclick="loop()">Recarregar</button>
+    
+    
+</body>
+<script>
+
+   function tempoLimite(){
+        window.setTimeout(
+            function clonometro(){
+                for(let a =1; a<=100;++a){
+                    document.write(a + '<br>')
+                }
+            },
+            3000
+        )
+}
+    let b = 0
+    let intervalo
+    function loop(){
+        intervalo = window.setInterval(function recarregar(){
+            b++
+            document.write(b + '<br>')
+            if(b >= 100){
+                clearInterval(intervalo)
+            }
+        }, 1000)
+    }
+    loop()
+
+
+
+</script>
+</html>

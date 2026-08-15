@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+/*
+    try{
+        codigo que poder haver um erro!
+    } catch {
+        Caso o codigo de errado vai executar esse trecho da logica 
+    } finally{ 
+        Esse trecho do codigo ele vai ser executado avendo um erro ou não     
+    }
+
+    throw: Ele cria um erro manualmente (já pra previnir erros futuros)
+*/
+
+    try{
+        function maiorDeIdade(){
+            let idade= Number(prompt("Digite a sua idade"))
+            if(idade <18){
+                console.log("Menor de idade")
+            } else if(Number.isNaN(idade)){
+                throw "Apenas números" //criando erro
+            } else{
+                console.log("Maior de idade")
+            }
+        }
+        maiorDeIdade()
+    } catch(error) { //tratando erro
+        console.log('Ouver um erro no codigo, já Estamos/analisado resolvendo o problema')
+    } finally{
+        console.log("Aplição finalizada")
+    }
+
+    
+
+</script>
+</html>

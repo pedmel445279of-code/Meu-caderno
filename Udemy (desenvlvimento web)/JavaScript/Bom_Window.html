@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <button onclick="navegador()">Navegador</button>
+    <br><br><hr>
+
+    <button onclick="abrir()">Abrir</button>
+    <button onclick="fechar()">Fechar</button>
+    <br><br><hr>
+
+    <button onclick="tempo()">Tempo</button>
+
+</body>
+
+<script>
+
+    function navegador() {
+        console.log(window.navigator)
+    }
+
+    function abrir() {
+        window.open('https://web.whatsapp.com/')
+    }
+
+    function fechar() {
+        window.close()
+    }
+
+    function tempo() {
+
+        setTimeout(function() {
+            alert("Olá mundo")
+        }, 1000)
+
+    }
+
+</script>
+</html>
