@@ -14,6 +14,10 @@ redimensiconamento()
 
 function posicaomosquito(){
 
+    //remove o mosquito da tela, o codigo fica no começo pra ja apagar o mosquito antes de gerar outro
+    if(document.getElementById('mosquito'))
+    {document.getElementById('mosquito').remove()}
+
     // 1. Número aleatório
     let posicaoX = Math.floor(Math.random() * largura) - 90
     let posicaoY = Math.floor(Math.random() * altura) - 90
@@ -29,6 +33,7 @@ function posicaomosquito(){
     mosquito.style.left = posicaoX + 'px'
     mosquito.style.top = posicaoY + 'px'
     mosquito.style.position = 'absolute'
+    mosquito.id = 'mosquito'
 
     // 3. Colocar o elemento criado na página
     document.body.appendChild(mosquito)
@@ -65,3 +70,10 @@ function ladoAleatorio(){
     }   
 }
 
+    //tempo determinado para todo esse provesso de cima funcionar
+
+    setInterval(
+        function(){
+            posicaomosquito()
+        }, 1000
+    )
