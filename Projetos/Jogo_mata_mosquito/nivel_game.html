@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>escolha o nivel</title>
+    <style>
+        body{
+            background-image: url(imagens/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+        
+        .padrao{
+        margin: 20px;
+        padding: 50px;
+        top: 50%;
+        left: 50%;
+        
+        }
+     </style>
+     
+</head>
+<body>
+    <div id="container">
+
+        <button class="padrao" type="button" onclick="facil()"><a href="index.html">Fácil</a></button>
+        <button type="button" class="padrao" onclick="dificuldade()"><a href="index.html">Médio</a></button>
+        <button type="button" onclick="dificuldade()" class="padrao"><a href="index.html">Difício</a></button>
+
+    </div>
+</body>
+</html>

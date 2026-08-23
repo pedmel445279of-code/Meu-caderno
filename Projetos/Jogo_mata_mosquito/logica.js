@@ -14,7 +14,7 @@ redimensiconamento()
 
 function posicaomosquito(){
 
-    //remove o mosquito da tela, o codigo fica no começo pra ja apagar o mosquito antes de gerar outro
+    //remove o mosquito da tela (caso exista), o codigo fica no começo pra ja apagar o mosquito antes de gerar outro
     if(document.getElementById('mosquito'))
     {document.getElementById('mosquito').remove()}
 
@@ -64,9 +64,9 @@ function ladoAleatorio(){
 
     switch(lados){
         case 0:
-            return 'mosquito1'
+            return 'ladoA'
         case 1:
-            return 'mosquito2'
+            return 'ladoB'
     }   
 }
 
@@ -77,3 +77,14 @@ function ladoAleatorio(){
             posicaomosquito()
         }, 1000
     )
+
+    //dificuldade adaptativa
+
+    function facil(){
+
+        function facil(){
+            for(let a1=120; a1<=120;a1-- ){
+                document.write(a1)
+            }
+        }
+    }

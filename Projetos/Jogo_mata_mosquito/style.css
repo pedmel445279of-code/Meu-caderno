@@ -1,3 +1,12 @@
+body{
+    background-image: url(imagens/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
 .mosquito1{
     height: 50px;
     width: 50px;
@@ -11,11 +20,16 @@
     width: 90px;
 }
 
-.mosquito1{
+.ladoA{
     transform: scaleX(1);
-    
 }
 
-.mosquito2{
+.ladoB{
     transform: scaleX(-1);
+}
+
+.caixa{
+    border: 10px solid black;
+    position: absolute;
+    top: 90%;
 }
