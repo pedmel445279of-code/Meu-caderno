@@ -36,3 +36,39 @@ Uso do grid no CSS:
     Uma forma mais curta:
     grid-template-columns: repeat(3, 1fr);
         Significa: repita 3 vezes uma coluna de 1fr.
+
+Uso do flex no CSS:
+
+display: flex;              /* Ativa o Flexbox */
+flex-direction: row;        /* Define a direção */
+justify-content: center;    /* Alinha no eixo principal */
+align-items: center;        /* Alinha no outro eixo */
+gap: 10px;                  /* Espaço entre elementos */
+flex-wrap: wrap;            /* Permite quebra de linha */
+
+                justify-content: flex-start;     /* Começo */
+                justify-content: center;         /* Centro */
+                justify-content: flex-end;       /* Final */
+                justify-content: space-between;  /* Espaço entre os elementos */
+                justify-content: space-around;   /* Espaço ao redor */
+                justify-content: space-evenly;   /* Espaços iguais */
+
+                flex-start
+                [1][2][3]----------------
+
+                center
+                --------[1][2][3]--------
+
+                flex-end
+                ----------------[1][2][3]
+
+                space-between
+                [1]--------[2]--------[3]
+
+
+                align-items: flex-start;
+                align-items: center;
+                align-items: flex-end;
+
+
+

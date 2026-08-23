@@ -14,13 +14,27 @@
             width: 100vw;
             height: 100vh;
         }
+
+        #container{
+             display: flex;
+            justify-content: center; /* Centraliza na horizontal */
+            align-items: center;     /* Centraliza na vertical */
+            gap: 20px;               /* Espaço entre os blocos */
+            height: 100vh;           /* Container ocupa a altura da tela */
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+        }
         
         .padrao{
+        background-color:aquamarine;
         margin: 20px;
         padding: 50px;
         top: 50%;
         left: 50%;
-        
         }
      </style>
      
@@ -29,9 +43,35 @@
     <div id="container">
 
         <button class="padrao" type="button" onclick="facil()"><a href="index.html">Fácil</a></button>
-        <button type="button" class="padrao" onclick="dificuldade()"><a href="index.html">Médio</a></button>
-        <button type="button" onclick="dificuldade()" class="padrao"><a href="index.html">Difício</a></button>
+        <button type="button" class="padrao" onclick="medio()"><a href="index.html">Médio</a></button>
+        <button type="button" onclick="dificil()" class="padrao"><a href="index.html">Difício</a></button>
 
     </div>
+    <script>
+           //dificuldade adaptativa
+
+           
+        
+           function medio(){
+               for(let a1=70; a1>=0;a1-- ){
+                   //document.write(a1)
+                   console.log(a1)
+               }
+           }
+           function dificil(){
+               for(let a1=40; a1>=0;a1-- ){
+                   /*document.write(a1)*/
+                   console.log(a1)
+               }
+           }
+           
+           setInterval(
+               function facil(){
+                   for(let a1=120; a1>=0;a1-- ){
+                       //document.write(a1)
+                       console.log(a1)
+                    }
+                }, 1000)
+    </script>
 </body>
 </html>

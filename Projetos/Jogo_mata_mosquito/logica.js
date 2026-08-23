@@ -78,13 +78,4 @@ function ladoAleatorio(){
         }, 1000
     )
 
-    //dificuldade adaptativa
-
-    function facil(){
-
-        function facil(){
-            for(let a1=120; a1<=120;a1-- ){
-                document.write(a1)
-            }
-        }
-    }
+ 
