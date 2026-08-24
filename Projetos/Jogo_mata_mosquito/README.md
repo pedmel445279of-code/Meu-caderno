@@ -11,3 +11,17 @@ Preciso clicar em um botão pra celecionar a dificuldade, criar uma nova magina 
 -Ao clicar voce é levado a pagina do jogo
 -um clonometro inicia ao clicar
 -Quando terminar o clonometro
+
+
+    Logica da contagem
+
+-numero começa em 120;
+-a cada 1 segundo;
+-mostrar numero;
+-diminuir 1;
+-se chegar em 0;
+-parar;
+
+    Correção de erro/dificuldade:
+
+    Se eu mudar a logica do contador e colocar o codigo no index.html que é ande a contagem vai aparecer e só fazer um caminho em que liga ao clicar na pagina de escolher os niveis;

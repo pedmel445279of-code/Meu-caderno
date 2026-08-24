@@ -36,42 +36,23 @@
         top: 50%;
         left: 50%;
         }
-     </style>
-     
+    </style>
+    <script>
+           function escolherNivel(nivel){
+                localStorage.setItem('nivel', nivel)
+                window.location.href = 'index.html'
+            }
+    </script>
+
 </head>
 <body>
     <div id="container">
 
-        <button class="padrao" type="button" onclick="facil()"><a href="index.html">Fácil</a></button>
-        <button type="button" class="padrao" onclick="medio()"><a href="index.html">Médio</a></button>
-        <button type="button" onclick="dificil()" class="padrao"><a href="index.html">Difício</a></button>
+        <button class="padrao" type="button" onclick="escolherNivel('facil')"><a href="index.html">Fácil</a></button>
+        <button type="button" class="padrao" onclick="escolherNivel('medio')"><a href="index.html">Médio</a></button>
+        <button type="button" onclick="escolherNivel('dificil')" class="padrao"><a href="index.html">Difício</a></button>
 
     </div>
-    <script>
-           //dificuldade adaptativa
 
-           
-        
-           function medio(){
-               for(let a1=70; a1>=0;a1-- ){
-                   //document.write(a1)
-                   console.log(a1)
-               }
-           }
-           function dificil(){
-               for(let a1=40; a1>=0;a1-- ){
-                   /*document.write(a1)*/
-                   console.log(a1)
-               }
-           }
-           
-           setInterval(
-               function facil(){
-                   for(let a1=120; a1>=0;a1-- ){
-                       //document.write(a1)
-                       console.log(a1)
-                    }
-                }, 1000)
-    </script>
 </body>
 </html>

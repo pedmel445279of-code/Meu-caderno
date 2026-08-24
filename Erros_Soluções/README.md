@@ -1,6 +1,6 @@
 ErrosFrequntes/Soluções
 
-ERRO COM TELA DE FUNDO DISTORCIDA:
+---------------------ERRO COM TELA DE FUNDO DISTORCIDA:-------------------------
 
     No css
             body {
@@ -39,12 +39,12 @@ Uso do grid no CSS:
 
 Uso do flex no CSS:
 
-display: flex;              /* Ativa o Flexbox */
-flex-direction: row;        /* Define a direção */
-justify-content: center;    /* Alinha no eixo principal */
-align-items: center;        /* Alinha no outro eixo */
-gap: 10px;                  /* Espaço entre elementos */
-flex-wrap: wrap;            /* Permite quebra de linha */
+    display: flex;              /* Ativa o Flexbox */
+    flex-direction: row;        /* Define a direção */
+    justify-content: center;    /* Alinha no eixo principal */
+    align-items: center;        /* Alinha no outro eixo */
+    gap: 10px;                  /* Espaço entre elementos */
+    flex-wrap: wrap;            /* Permite quebra de linha */
 
                 justify-content: flex-start;     /* Começo */
                 justify-content: center;         /* Centro */
@@ -70,5 +70,38 @@ flex-wrap: wrap;            /* Permite quebra de linha */
                 align-items: center;
                 align-items: flex-end;
 
+
+--------------------------PROBLEMAS COMUNS NO JAVASCRIP:----------------------
+
+
+Contador em segundos:
+
+    Logica:
+        numero começa em 120
+        a cada 1 segundo:
+        mostrar numero
+        diminuir 1
+        se chegar em 0:
+        parar
+
+    Codigo:
+
+        let a1 = 120 //Variavel com o total do tempo.
+        setInterval(
+            function facil(){ //Codigo com os parametros.
+                if(a1 => 0){
+                    console.log(a1)
+                    --a1
+                }
+            }
+        ,1000) //tempo em milisegundos.
+
+Metodos de salvamento:
+
+localStorage.setItem()	//Salva
+localStorage.getItem()	//Recupera
+localStorage.removeItem()	//Apaga um item
+localStorage.clear()	//Apaga tudo
+        
 
 

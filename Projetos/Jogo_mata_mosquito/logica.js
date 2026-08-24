@@ -72,10 +72,42 @@ function ladoAleatorio(){
 
     //tempo determinado para todo esse provesso de cima funcionar
 
-    setInterval(
-        function(){
-            posicaomosquito()
-        }, 1000
-    )
+    //dificuldade adaptativa
+
+    
+
+                let a1 = 90
+                function facil(){
+                setInterval(
+                    function(){
+                        if(a1 >= 0){
+                            document.getElementById('tempoRestante').textContent =a1
+                            --a1
+                        }
+                   }
+                ,1000)}
+
+                let a2 = 70
+                function medio(){
+                setInterval(
+                function(){
+                    if(a2>=0){
+                        document.getElementById('tempoRestante').textContent =a2
+                        --a2
+                    }
+                }    
+                ,1000)}
+
+                let a3=50
+                function dificil(){
+                setInterval(
+
+                function(){
+                    if(a3 >= 0){
+                    document.getElementById('tempoRestante').textContent = a3
+                    --a3
+                    }
+                }
+                ,1000)};
 
  
