@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #dadosEntrada{
+            border: 1px solid black;
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10px;
+            
+        }
+
+        #gameResultado{
+            position: absolute;
+            left: 700px;
+            top: 300px;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <div id="cotainer">
+            <div id="dadosEntrada">
+                <h4>Digite pedra, papel ou tesoura:</h4>
+                <div>
+                    <input type="text" id="campoTexto" placeholder="Digite aqui:">
+                </div>
+            <div id="botoes">
+                <button onclick="jokenpó()" id="enciar" type="button">Resultado </button>
+            </div>
+        </div>
+        <div id="gameResultado">
+            <h1 id="mostrarTela">Resultado:</h1>
+            <h1 id="escolhas">Escolhas:</h1>
+        </div>
+    </div>
+    
+</body>
+    <script>
+      
+        let escolhaComputador 
+        let resultado 
+        
+        function jokenpó(){
+
+            let escolhaUsuario = document.getElementById('campoTexto').value
+
+        do{
+
+            let aleatorio = Math.floor(Math.random()*3)
+
+            switch(aleatorio){ //aqui o switch sorteia, ele pega o valor da operação acima e conpara com os casos e o seu parametro
+                case 0: 
+                escolhaComputador="papel" // = se o valor saio zero entao é papel
+                break
+                case 1: 
+                escolhaComputador="pedra" // = se o valor saio um entao é pedra
+                break
+                case 2:
+                break 
+                escolhaComputador="tesoura" // = se o valor saio dois entao é tesoura
+                default:};
+            if(
+                escolhaUsuario === "pedra" && escolhaComputador === "tesoura" ||
+                escolhaUsuario === "tesoura" && escolhaComputador === "papel" ||
+                escolhaUsuario === "papel" && escolhaComputador === "pedra")
+            { 
+                resultado = (escolhaUsuario + " vence de " + escolhaComputador + " ,Ou seja, você venceu!")
+            } else if(escolhaComputador === escolhaUsuario){    
+                resultado = ("Empate!")
+            } else{
+                resultado = ("O computador ganhou")
+            };
+
+            document.getElementById('mostrarTela').textContent = resultado
+            document.getElementById('escolhas').textContent = ("O computador escolheu " + escolhaComputador + ", e você escolheu " + escolhaUsuario)
+
+
+        }while(resultado === "Empate!")
+    }
+
+
+        //Quem ganha de quem, pedra ganha de tesousa, tesoura ganha de papel e papel ganha de pedra
+            
+    </script>
+</html>
