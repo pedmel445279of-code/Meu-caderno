@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="log.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="blocoGeral">
+            <h4>Quantidade de caractéres:</h4>
+            <input type="text" id="tamanhoSenha" placeholder="Número de caractéres"> <br>
+            <button type="button" onclick="gerarSenhar()" id="gerarSenha">Gerar senha</button> <br>
+
+            <h4 id="newSenha"></h4>
+        </div>
+    </div>
+    
+</body>
+<script>
+
+    function gerarSenhar(){
+      /* let novaSenha = document.getElementById('newSenha').textContent
+       let vazio = ''*/
+       
+       let quantCaracter= document.getElementById('tamanhoSenha').value
+       let caracteres = "0132456789abcdefghijklmnopqrstuvwxyz_/;:~|"
+       
+       caracterSeparado = caracteres.split('')
+
+        for(let i = 1;i<=quantCaracter;++i){  //Repetir uma ação 10 vezes e, em cada repetição, gerar um número inteiro aleatório entre 0 e 9.
+         let aleatoria = Math.floor(Math.random()*caracterSeparado.length) //Aqui ele vai pegar apenas um elemento do Array(quem vai pegar os outros vai ser o for).
+         console.log(caracterSeparado[aleatoria]) //Entre no array caracteres/caracterSeparado e pegue o elemento que está na posição aleatoria(aqui ele vai pegar qualquer numero que foi gerado).
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    //fibonacci: é a soma dos dois ultimos numeros aonde, a sequencia começa em 1,1,2,3,5....
+    let num = 0
+    let num1 = 1
+    console.log(num)
+    console.log(num1)
+    
+    for(let i = 0;i<10;++i){
+        let numNext = num + num1
+        console.log(numNext)
+        num = num1
+        num1 = numNext
+    }
+    /*
+    1
+    1
+    2
+    3
+    5
+    8
+    :
+    :
+    formula:
+    a1(n)= a1(-1n)+a1(-2n)
+    */
+</script>
+</html>
