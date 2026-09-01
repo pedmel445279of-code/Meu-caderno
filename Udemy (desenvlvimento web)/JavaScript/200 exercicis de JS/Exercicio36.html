@@ -7,12 +7,50 @@
 </head>
 <body>
 
-    <script>
-    for(n=0; n<=1000; ++n){
-        if(){
-        }
-    }
-    </script>
-    
+
 </body>
+    <script>
+
+        
+        //Número pertfeito, aonde a soma dos seus divisores (exeto o proprio numero) resulta nele mesmo 
+        /*
+            1. Escolher um número
+            2. Encontrar os divisores dele
+            3. Guardar os divisores no Array
+            4. Somar os divisores
+            5. Não somar o próprio número
+            6. Comparar a soma com o número
+        */
+            let numb = Number(prompt("Escolha um número"))
+            let multiplos = []
+            let soma = 0
+
+            // Encontrar os divisores
+            for (let i = 1; i <= numb; ++i) {
+
+                if (numb % i == 0) {
+                    console.log(i + " é divisor de " + numb)
+                    multiplos.push(i)
+                }
+            }
+
+            // Somar os divisores, menos o próprio número
+            for (let i = 0; i < multiplos.length; i++) {
+
+                if (multiplos[i] != numb) {
+                    soma = soma + multiplos[i]
+                }
+            }
+
+            // Verificar se é perfeito
+            if (soma == numb) {
+                document.write(numb + " é um número perfeito<br>")
+            } else {
+                document.write(numb + " não é um número perfeito<br>")
+            }
+
+            document.write("Divisores: " + multiplos + "<br>")
+            document.write("Soma dos divisores: " + soma)
+                
+      </script>
 </html>
