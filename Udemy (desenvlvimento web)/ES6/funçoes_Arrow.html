@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+function quadrado(x=2){ //uma função normal
+    return x*x
+}
+quadrado()
+
+let anonima = function(y=2){
+    return y*y*y
+}
+
+
+let arrow = (soma = 20) => soma + soma //retorno implicito
+
+let logica = (numero = 5) => { //logicas maiores
+    if(numero % 2 === 0){
+        return(`${numero} é um número Par`)
+    } else{
+        return(`${numero} é um número Impar`)
+    }
+}
+
+
+
+
+
+
+
+document.write(`O cubo de um numero: ${anonima()} <br>
+O quadrado de um numero: ${quadrado()} <br>
+A soma de dois numeros: ${arrow()} <br>
+    ${logica()}
+`)
+
+</script>
+</html>
