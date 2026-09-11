@@ -6,20 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-    
 </body>
 <script>
 
-let numb = Number(prompt("Digite qualque número:"))
-
-function fatorial(numb){
-    let multiplo = 1
-    for(let i = 1; i <= numb; ++i){
-        multiplo *= i
-    }
-document.write(multiplo)
-}
-fatorial(numb)
+    let frase = 'Mosca'
+    let separar = frase.split('')
+    let reverter = separar.reverse()
+    let juntar = reverter.join('')
+    console.log(juntar)
 
 </script>
 </html>

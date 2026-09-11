@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //class: Seria o modelo/entidade
+    //constructor(): seria a nossa caracteristicas
+    //nomeDaAção(): seria como uma função, essa são as nossas açoes!
+    //let x = new nomeDaEntidade/class
+
+    //ordem: Entidade, Identidade, caracteristicas e Açoes
+
+    class contaBancaria{ //Entidade
+        //saldoConta
+        //extrato
+        //limite
+        //agencia
+        constructor(){ //Caracteristicas
+            this.saldoConta = 50
+            this.extrato = 150
+            this.limite = 850
+            this.conta= 23965
+        }
+
+        // Açoes/funçoes
+
+        sacar(valorSaida){
+            if(extrato >= valorSaida){
+                this.extrato -= valorSaida
+            } else {
+                console.log('Saldo insuficiente')
+            }
+        }
+
+        depositar(valorDepositado){
+            this.extrato += valorDepositado
+        }
+
+        extratoBancario(){
+           return this.extrato
+        }
+
+    }
+
+    let x = new contaBancaria() //Identidade
+
+
+</script>
+</html>
