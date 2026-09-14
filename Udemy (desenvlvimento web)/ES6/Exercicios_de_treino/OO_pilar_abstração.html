@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pr-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script>
+        class maquinaDeCAfe{ //entidade 
+            constructor(QutDeAgua, QutDeCafe){
+                this.QutDeAgua = QutDeAgua
+                this.QutDeCafe = QutDeCafe
+                this.ligado = false
+            }
+            ligar(){
+                if(this.QutDeAgua >=100  &&this.QutDeCafe >= 20){
+                    this.ligado = true
+                    console.log("Máquina ligada")
+                } else {
+                    console.log("Coloque no mínimo 100ml de água e 20g de café. ")
+                }
+            }
+        }
+        let x = new maquinaDeCAfe(100, 20)
+        let y = new maquinaDeCAfe(80, 15)
+        let z = new maquinaDeCAfe(10, 10)
+        console.log(x.ligar())
+        console.log(z.ligar())
+        console.log(y.ligar())
+    </script>
+</head>
+<body>
+</body>
+</html>
