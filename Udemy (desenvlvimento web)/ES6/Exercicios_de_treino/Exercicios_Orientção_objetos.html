@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let saldo = Math.floor(Math.random('')*1000)
+        document.write(saldo)
+
+        class contaBancaria{ //entidade
+            
+            constructor(){ //caracteristicas
+                this.titular = "Maria"
+                this._saldoConta = saldo
+                this._senha = "admin123"
+            }
+
+            //açoes
+
+            depositar(deposito){
+                if(this._saldoConta > 0){
+                    this._saldoConta += deposito
+                } 
+            }
+
+            sacar(digiteSuaSenha){
+                if(this._senha === digiteSuaSenha){
+                    console.log("Acesso Altorzado, sacando o seu tinheiro!")
+                } else {
+                    console.log("Senha incorreta")
+                }
+            }
+
+            consultarSaldo(){
+                console.log()
+            }
+
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
