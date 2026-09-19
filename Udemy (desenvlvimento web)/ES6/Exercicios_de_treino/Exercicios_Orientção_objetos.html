@@ -6,40 +6,35 @@
     <title>Document</title>
     <script>
 
-        let saldo = Math.floor(Math.random('')*1000)
-        document.write(saldo)
-
         class contaBancaria{ //entidade
-            
             constructor(){ //caracteristicas
-                this.titular = "Maria"
-                this._saldoConta = saldo
+                this._agencia = 10010
                 this._senha = "admin123"
+                this._titular = "Maria"
             }
-
-            //açoes
-
-            depositar(deposito){
-                if(this._saldoConta > 0){
-                    this._saldoConta += deposito
-                } 
+            //ações
+            get name(){
+                return console.log(this._titular)   
             }
-
-            sacar(digiteSuaSenha){
-                if(this._senha === digiteSuaSenha){
-                    console.log("Acesso Altorzado, sacando o seu tinheiro!")
+            set agencias(suaAgencia){
+                if(this._agencia === suaAgencia){
+                    console.log(`Agencia encontrada! 
+titular: ${this.name}`)
                 } else {
-                    console.log("Senha incorreta")
+                    console.log("Agencia não encontrada")
                 }
             }
-
-            consultarSaldo(){
-                console.log()
+            set senhaConta(senha){
+                if(this._senha == senha){
+                    document.write("Acesso bem sucedido")
+                } else {
+                    document.write("Senha incorreta!")
+                }
             }
-
         }
-
-
+        let x = new contaBancaria()
+        console.log(x.agencias = 10010)
+        console.log(x.senhaConta = "admin123")
     </script>
 </head>
 <body>

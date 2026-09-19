@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let dano = Math.floor(Math.random('')*100)
+        let cura = 25
+        class personagem{
+            constructor(){
+                this.nivel = 1
+                this.classe = "guerreiro"
+                this._vida = 100
+            }
+            get pontosVida(){
+                if(this._vida <= 0){
+                    return("Game over")
+                } else {
+                    return (`Pontos de vida : ${this._vida}`)
+                }
+            }
+            set danoSofrido(dano){ //Regulador de Ataques
+                for(let i = 1; i<=1; ++i ){
+                    this._vida -= dano
+                    console.log(`Levou um dano, perdeu ${dano} pontos de vida.`)
+                }
+            }
+            set poção(cura){
+                if(this._vida > 50){
+                    this._vida += cura
+                    console.log("Tomou uma poção de cura!")
+                } else {
+                    this._vida += (cura*2)
+                    console.log("Tomou duas poções de cura!")
+                }
+            }
+        }
+
+        let x = new personagem()
+
+        console.log(x.danoSofrido = dano)
+        console.log(x.pontosVida)
+        console.log(x.poção = cura)
+        console.log(x.pontosVida)   
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
