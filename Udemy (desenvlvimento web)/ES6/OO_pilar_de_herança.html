@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //Na hernaça tem que tem uma classe universal aonde ele estará implementada na maioria dos classes(pai e filho).
+
+    class animal{
+        constructor(){
+            this.cor = ""
+            this.tamanho = null
+        }
+        dormir(){
+            console.log("Dormir")
+        }
+    }
+
+    class passaro extends animal{ //Ele chama um extenção e depois o nome da extenção
+        constructor(){
+            super()
+            this.bico = "Grande"
+        }
+
+        voar(){
+            console.log("Voa!")
+        }
+    }
+
+    class cachorro extends animal{
+        constructor (){
+            super()
+            this.orelha = "Pequena"
+        }
+
+        correr(){
+            console.log("Correndo!")
+        }
+    }
+
+    class papagaio extends passaro {
+        constructor(){
+            super()
+            this.saberFalar = true
+        }
+        falar(){
+            console.log("Fala portugues")
+        }
+    }
+
+    let z = new papagaio
+    let x = new cachorro
+    let y = new passaro
+
+    console.log(x.dormir()) 
+    console.log(y)
+    console.log(z)
+    console.log(z.falar())
+</script>
+<body>
+    
+</body>
+</html>

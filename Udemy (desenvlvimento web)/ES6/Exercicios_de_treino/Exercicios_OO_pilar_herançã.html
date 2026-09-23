@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clínica veterinária</title>
+</head>
+<script>
+
+    class animal{
+        constructor(){
+            this.nome = document.getElementById('name').value
+            this.idade = document.getElementById('age').value
+            this.peso = document.getElementById('peso').value
+        }
+        comer(){
+            console.log("Comendo").value
+        }
+        dormir(){
+            console.log("Dormindo").value
+        }
+    }
+
+    class cachorro extends animal{
+        constructor(){
+            super()
+            this.raça = document.getElementById('raça').value
+        }
+        latir(){
+            console.log("latindo")
+        }
+    }
+
+    class gato extends animal{
+        constructor(){
+            super()
+            this.tamanhoPelo = document.getElementById('skin').value
+        }
+        miar(){
+            console.log("miando")
+        }
+    }
+    let gatos = new gato
+    let cachorros = new cachorro
+
+</script>
+<body>
+    <div id="container">
+        <div id="cadastroEntrada">
+            <h3>Nome do animal:</h3>
+            <input type="text" placeholder="Digite aqui" id="name">
+            <h3>Idade:</h3>
+            <input type="text" placeholder="Digite aqui" id="ege">
+            <h3>Peso:</h3>
+            <input type="text" placeholder="Digite aqui" id="peso">
+            <h3>Tamanho do pelo:</h3>
+            <input type="text" placeholder="Digite aqui" id="skin">
+            <h3>Raça:</h3>
+            <input type="text" placeholder="Digite aqui" id="raça"> <br><br>
+            <button type="button" onclick="">Cadastrar</button><hr>
+        </div>
+        <div id="cadastroSaída">
+            <h3>Nome do animal:<h3 id="saida"></h3></h3>
+            <h3>Peso:<h3 id="saida"></h3></h3>
+            <h3>Idade:</h3><h3 id="saida"></h3></h3>
+            <h3>Raça:<h3 id="saida"></h3></h3>
+        </div>
+    </div>
+
+    
+</body>
+</html>
