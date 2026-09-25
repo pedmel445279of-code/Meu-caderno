@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    class veiculos{
+
+    constructor(cor, motor, marca, modelo){
+        this.cores = cor
+        this.motor = motor
+        this.marca = marca
+        this.modelo = modelo
+    }
+
+    velociade(){
+        console.log("10km/h")
+    }
+
+    marcha(){
+        console.log("5 marchas no mínimo")
+    }
+}
+
+    class carro extends veiculos{
+        constructor(){
+            super('Azul', 'V8',' BMW', 'R36')
+            this.qunatidadeDePortas = 4
+            this.turbo = true
+            this.bodyKit = true
+        }
+
+        velociaideMaxima(){
+            if(this.turbo == true){
+                console.log("velociade máxima: 250km/h")
+            } else{
+                console.log("Velocidade maxima: 180km/h")
+            }
+        }
+
+        modificação(){
+
+            let aleatorio = Math.floor(Math.random('')*2)
+            
+            if(this.bodyKit == true){
+                switch(aleatorio){
+                    case 0:
+                        console.log("Esportivo")
+                    break
+                    case 1:
+                        console.log("Robusto")
+                    default:
+                };
+            } else{
+                console.log("BodyKit Original!")
+            }
+        }
+    }
+
+
+    class moto extends veiculos{
+
+        constructor(){
+            super('Preta','250cc','Mitsubishi','Fector 250')
+            this.freios = "Disco"
+            this.quantidadeDeRodas = 2
+            this.gaiolaDeProteção = true
+        }   
+
+        proteção(){
+            if (this.gaiolaDeProteção == true){
+                console.log("Mais seguro")
+            } else {
+                console.log("Menos seguro")
+            }
+        }
+        
+    }
+
+    let x = new carro
+    console.log(x,x.velociaideMaxima(),x.modificação())
+    let y = new moto
+    console.log(y,y.proteção())
+
+    
+</script>
+</html>

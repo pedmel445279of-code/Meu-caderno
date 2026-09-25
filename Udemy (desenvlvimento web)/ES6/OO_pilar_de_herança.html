@@ -1,65 +1,53 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
+ 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title></title>
+ 
+    <script>
+        class Animal {
+            constructor(cor, tamanho, peso) {
+                this.cor = cor
+                this.tamanho = tamanho
+                this.peso = peso
+            }
+ 
+            dormir() {
+                console.log('Dormir')
+            }
+        }
+ 
+        class Passaro extends Animal {
+            constructor(bico, cor, tamanho, peso) {
+                super(cor, tamanho, peso)
+                this.bico = bico
+            }
+            voar() {
+                console.log('Voar')
+            }
+        }
+ 
+        class Papagaio extends Passaro {
+            constructor(sabeFalar, cor, tamanho, peso) {
+                super('Médio', cor, tamanho, peso)
+                this.sabeFalar = sabeFalar
+            }
+ 
+            falar(){
+                console.log('Falar')
+            }
+        }
+ 
+        let papagaio = new Papagaio(true, 'verde', 25, 350)
+        console.log(papagaio)
+        let papagaio2 = new Papagaio(false, 'branco', 10, 80)
+        console.log(papagaio2)
+ 
+    </script>
 </head>
-<script>
-    //Na hernaça tem que tem uma classe universal aonde ele estará implementada na maioria dos classes(pai e filho).
-
-    class animal{
-        constructor(){
-            this.cor = ""
-            this.tamanho = null
-        }
-        dormir(){
-            console.log("Dormir")
-        }
-    }
-
-    class passaro extends animal{ //Ele chama um extenção e depois o nome da extenção
-        constructor(){
-            super()
-            this.bico = "Grande"
-        }
-
-        voar(){
-            console.log("Voa!")
-        }
-    }
-
-    class cachorro extends animal{
-        constructor (){
-            super()
-            this.orelha = "Pequena"
-        }
-
-        correr(){
-            console.log("Correndo!")
-        }
-    }
-
-    class papagaio extends passaro {
-        constructor(){
-            super()
-            this.saberFalar = true
-        }
-        falar(){
-            console.log("Fala portugues")
-        }
-    }
-
-    let z = new papagaio
-    let x = new cachorro
-    let y = new passaro
-
-    console.log(x.dormir()) 
-    console.log(y)
-    console.log(z)
-    console.log(z.falar())
-</script>
+ 
 <body>
-    
+    <div id="output"></div>
 </body>
+ 
 </html>

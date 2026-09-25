@@ -5,71 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clínica veterinária</title>
 </head>
-<script>
 
-    class animal{
-        constructor(){
-            this.nome = document.getElementById('name').value
-            this.idade = document.getElementById('age').value
-            this.peso = document.getElementById('peso').value
-        }
-        comer(){
-            console.log("Comendo").value
-        }
-        dormir(){
-            console.log("Dormindo").value
-        }
-    }
-
-    class cachorro extends animal{
-        constructor(){
-            super()
-            this.raça = document.getElementById('raça').value
-        }
-        latir(){
-            console.log("latindo")
-        }
-    }
-
-    class gato extends animal{
-        constructor(){
-            super()
-            this.tamanhoPelo = document.getElementById('skin').value
-        }
-        miar(){
-            console.log("miando")
-        }
-    }
-    let gatos = new gato
-    let cachorros = new cachorro
-
-    
-
-</script>
 <body>
     <div id="container">
         <div id="cadastroEntrada">
             <h3>Nome do animal:</h3>
             <input type="text" placeholder="Digite aqui" id="name">
             <h3>Idade:</h3>
-            <input type="text" placeholder="Digite aqui" id="ege">
+            <input type="text" placeholder="Digite aqui" id="idade">
             <h3>Peso:</h3>
             <input type="text" placeholder="Digite aqui" id="peso">
             <h3>Tamanho do pelo:</h3>
             <input type="text" placeholder="Digite aqui" id="skin">
             <h3>Raça:</h3>
-            <input type="text" placeholder="Digite aqui" id="raça"> <br><br>
-            <button type="button" onclick="gatos()">Cadastrar</button><hr>
+            <input type="text" placeholder="Digite aqui" id="raça">
+            <br><br>
+            <button type="button" onclick="botao()">Cadastrar</button>
+            <hr>
         </div>
-        <div id="cadastroSaída">
-            <h3>Nome do animal:<h3 id="saida"></h3></h3>
-            <h3>Peso:<h3 id="saida"></h3></h3>
-            <h3>Idade:</h3><h3 id="saida"></h3></h3>
-            <h3>Raça:<h3 id="saida"></h3></h3>
-            <h3>Tamanho do pelo:<h3 id="saida"></h3></h3>
+
+        <div id="cadastroSaida" style="display: grid;">
+            <h3> Nome do animal:</h3><h3 id="saidaNome"></h3>
+
+            <h3> Peso:</h3><h3 id="saidaPeso"></h3>
+
+            <h3> Idade:</h3><h3 id="saidaIdade"></h3>
+
+            <h3> Raça:</h3><h3 id="saidaRaca"></h3>
+
+            <h3> Tamanho do pelo:</h3><h3 id="saidaTamanho"></h3>
         </div>
     </div>
-
-    
 </body>
+    <script>
+        class animal {
+            constructor() {
+                this.nome = document.getElementById('name').value
+                this.idade = document.getElementById('idade').value
+                this.peso = document.getElementById('peso').value
+            }
+            comer() {
+                console.log("Comendo")
+            }
+            dormir() {
+                console.log("Dormindo")
+            }
+        }
+
+        class cachorro extends animal {
+            constructor() {
+                super()
+                this.raça = document.getElementById('raça').value
+            }
+            latir() {
+                console.log("Latindo")
+            }
+        }
+
+        class gato extends animal {
+            constructor() {
+                super()
+                this.tamanhoPelo = document.getElementById('skin').value
+            }
+            miar() {
+                console.log("Miando")
+            }
+        }
+
+        function botao() {
+
+            let gatos = new gato()
+            let cachorros = new cachorro()
+
+            // Dados do gato
+            document.getElementById("saidaNome").textContent = gatos.nome
+            document.getElementById("saidaPeso").textContent = gatos.peso
+            document.getElementById("saidaIdade").textContent = gatos.idade
+            document.getElementById("saidaTamanho").textContent = gatos.tamanhoPelo
+            // Dados do cachorro
+            document.getElementById("saidaRaca").textContent = cachorros.raça
+        }
+    </script>
+
 </html>

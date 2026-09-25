@@ -15,7 +15,6 @@ programa
      escreva("Você digito\n") //Saída de valor para o conseole
      x = 5 //entrada de valor(o usuario que digita)
 
-
 	escreva("Você digito\n")
      y = 6
 
