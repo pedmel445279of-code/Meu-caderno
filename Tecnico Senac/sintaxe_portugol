@@ -1,0 +1,43 @@
+//Sintaxe basica do PORTUGOL:
+
+//O portugol tem uma estrutura base para consegui programar com ele:
+//Todos os algoritmos no Portugol precisam estar dentro da função início() que, por sua vez, precisa estar dentro do bloco programa.
+
+programa{
+    funcao inicio{
+        //codigo
+    }
+}
+
+escrever() //É o console (Saída de dados)
+É possível aprofundar-se um pouco mais no comando usando \n para pular uma linha.
+
+//bloco das declarações (variáveis)
+inteiro valor1
+
+//bloco das declarações (variáveis)
+inteiro valor1, valor2, soma
+
+
+
+//Identificadores do portugol:
+
+programa:	Define o nome/início do programa.
+função:	Cria uma função, ou seja, um bloco de código que realiza uma tarefa.
+início:	Indica onde começa a execução dos comandos.
+inteiro	:Declara uma variável que armazena números inteiros, como 10, 25 ou -5.
+real:	Declara uma variável que armazena números com casas decimais, como 10.5.
+cadeia:	Declara uma variável que armazena textos, como "Olá" ou "João".
+escreva: Exibe uma informação na tela.
+leia: Recebe uma informação digitada pelo usuário.
+se:	Cria uma condição: executa algo se determinada condição for verdadeira.
+senão:	Define o que acontece quando a condição do se for falsa.
+const:	Declara uma constante, cujo valor não deve ser alterado durante o programa.
+inclua:	Permite incluir bibliotecas ou recursos adicionais no programa.
+
+
+Operadores aritméticos: 
+adição (+)
+multiplicação (*)
+subtração (-) 
+divisão (/)
