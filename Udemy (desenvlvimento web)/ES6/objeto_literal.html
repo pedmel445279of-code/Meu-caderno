@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div id="dadosEntrada">
+            <h3>Nome</h3><br>
+            <input type="text" name="nome" id="name">
+            <h3>Idade</h3><br>
+            <input type="text" name="age" id="idade">
+            <h3>Estado Civil</h3><br>
+            <input type="text" name="estadosCivil" id="estadocivil"><br> 
+        </div>
+        <div id="enviar">
+            <button id="enviar" type="button" onclick="feito()">enviar</button>
+        </div>
+    </div>
+</body>
+<script>
+    /*class Produto{
+        constructor(descriçao, preço){
+            this.descriçao = "notebook"
+            this.preço = 2500
+        }
+        verEscriçao(){
+            console.log(`${this.descriçao} por apenas ${this.preço}`)
+        }
+    }
+        let x  = new Produto
+        console.log(x.verEscriçao())*/
+        // Entidade, Identidade ,Caracteristicas e Ações.
+        function feito(){
+        const cadastros =  {
+            nome: document.getElementById('name').value, //entidade
+            idade: document.getElementById('idade').value, //entidade
+            estadoCivil: document.getElementById('estadocivil').value, //entidade
+            estado: function(){
+                let x = Math.floor(Math.random()*2)
+                if(x == 0){
+                    console.log("Está bebendo café!")
+                } else {(console.log("Acabou o café"))}
+            }
+       }
+       console.log(cadastros)
+       console.log(cadastros.estado())
+    }
+    </script>
+</html>

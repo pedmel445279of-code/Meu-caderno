@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+
+let nome = "Pedro"
+    let Idade = 20
+    let sexo = "Masculino"
+    let profissão = "estudante" 
+
+    let objetoLiteral = {
+    nome: nome,
+    Idade: Idade,
+    sexo: sexo,
+    profissão: profissão,
+    exibirRemuso: function(){
+        console.log(`${this.nome},${this.idade},${this.sexo},${this.profissão},`)
+    }
+    }
+
+    console.log(objetoLiteral)
+    console.log(objetoLiteral.exibirRemuso())
+
+
+        let objetoLiteral2 = {
+    nome,
+    Idade,
+    sexo,
+    profissão,
+        exibirRemuso(){
+            console.log(`${this.nome},${this.idade},${this.sexo},${this.profissão},`)
+        }
+    }
+    console.log(objetoLiteral2)
+    console.log(objetoLiteral2.exibirRemuso())
+
+
+
+</script>
+</html>
