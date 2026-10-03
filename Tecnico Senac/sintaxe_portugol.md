@@ -41,3 +41,19 @@ adição (+)
 multiplicação (*)
 subtração (-) 
 divisão (/)
+
+para(variavel, condição, valor adicionado){codigo}
+
+    programa{
+	funcao inicio(){
+	//Estrutura de repetição: para(os tres parametros){codigo}
+		
+		inteiro contador
+
+	para(contador=0; contador <=10; contador++)
+	escreva(contador + "\n")	
+	}
+}
+
+inteiro meuNumero //declaração de variável
+const real MEIO = 0.5 //declaração de constante
