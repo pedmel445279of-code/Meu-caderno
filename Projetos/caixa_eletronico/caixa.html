@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            height: 100vw;
+            width: 100%;
+        }
+
+        #pratileira{
+            position: relative;
+            left: 1100px;
+            
+            
+        }
+
+        img{
+        border: 3px solid rgba(0, 0, 0, 0.457);
+        width: 100px;
+        height: 100px;
+        }
+
+        #car{
+        position: relative;
+        top: -300px;
+        left: 500px;
+        border: 3px solid rgba(255, 0, 0, 0.457);
+        width: 250px;
+        height: 250px;
+        
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="painel">
+            <h3>nome do produto</h3>
+            <h3>Valor do produto</h3>
+            <h3>Total</h3>
+
+            <select name="pay" id="pagamento">
+            <option value="dinheiro" disabled>Selecione</option>
+            <option value="dinheiro">Dinheiro</option>
+            <option value="card">Cartão</option>
+            </select><br><br>
+
+            <button type="button" >Finalizar compra</button>
+        </div>
+
+        <div id="pratileira">
+            <div id="cima">
+                <img src="img/aveia.jpg" alt="">
+                <img src="img/biscoito.jpg" alt="">
+                <img src="img/cafe.jpg" alt="">
+            </div>
+            <div id="meio">
+                <img src="img/chocolate.jpg" alt="">
+                <img src="img/fermento.jpg" alt="">
+                <img src="img/leite.jpg" alt="">
+            </div>
+            <div id="baixo">
+                <img src="img/pão.jpg" alt="">
+                <img src="img/tea.jpg" alt="">
+                <img src="img/trigo.jpg" alt="">
+            </div>
+
+        </div>
+
+        <div id="carrinho">
+            <img id="car" src="img/carrinho.jpg" alt="">
+        </div>
+
+    </div>
+    
+</body>
+<script>
+
+</script>
+</html>

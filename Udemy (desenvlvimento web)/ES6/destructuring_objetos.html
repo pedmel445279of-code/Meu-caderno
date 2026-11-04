@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //diferença dos doken:
+    // array => []
+    // objetos => {}
+
+    let produto = {
+        descrção: "notebook",
+        preço: 1900,
+        detalhes: {
+            fabricante: 'abc',
+            modelo: 'xyz'
+        }
+    }
+
+    let {descrção, preço, desconto = 5 } = produto
+    console.log(descrção, "\n ",preço, "\n", desconto)
+
+    //Quando se usa os dois pontos está dizendo que eu quero acessa os atributos que estão dentro desse modelo;
+    
+    let {detalhes: {fabricante, modelo, cores="preto"} } = produto
+    console.log(fabricante,modelo)
+    console.log(fabricante)
+    console.log(modelo)
+    console.log( cores)
+    console.log(produto.detalhes)
+
+
+</script>
+</html>

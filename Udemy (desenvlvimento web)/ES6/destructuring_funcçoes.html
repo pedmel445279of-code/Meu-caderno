@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+//-----------------Em Arrays-------------
+    let arr = [12,23,434,45]
+
+    function teste(/*Nome do array*/ [a,b,c,d,]){
+        console.log(a,b,c,d)
+    }
+
+    teste(arr /*Nome do array*/)
+    console.log(arr)
+
+//--------------Em Objetos Literias/diretos-------------------
+
+    let marca = {
+        monstro: "Kaiju",
+        tamanho: "35m"
+    }
+
+    function monstrosCatalogados(/*Nome do Objeto*/{monstro,tamanho}){
+        console.log(monstro, tamanho)
+    }
+
+    monstrosCatalogados(marca/*Nome do Objeto*/)
+
+    console.log(marca)
+</script>
+</html>

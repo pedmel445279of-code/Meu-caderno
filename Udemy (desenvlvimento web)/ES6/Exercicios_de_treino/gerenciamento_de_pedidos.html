@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let pedido = {
+        nome: "Maria",
+        Idade: "38",
+        gmail: "Maria123@gmail.com",
+        enderoço: {
+            cidade: "São Paulo",
+            rua: "São Judas", 
+            estado: "SP"
+        }, 
+        produto: {
+            nome_: "Bolacha rechiada", 
+            preço: 1.50,
+            quantidade: "120",
+            especifico: {
+                fabricante: "Nestle",
+                modelo: 27639-12
+            }
+        }
+    }
+
+    let {nome, gmail, enderoço: {cidade, estado}, produto: {nome_, preço,quantidade}, produto: {especifico: {fabricante,modelo}}} = pedido
+
+    console.log(
+       "Nome do cliente: "+ nome + "\n",
+       "Gmail : "+ gmail + "\n",
+       "cidade: "+ cidade + "\n",
+       "estado: "+ estado + "\n",
+       "Produto: "+ nome_ + "\n",
+       "Preço: "+ preço + "\n",
+       "Quantidade: "+ quantidade + "\n",
+       "Fabricante: "+ fabricante + "\n",
+       "Código do modelo: "+ modelo + "\n",       
+    )
+
+</script>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+class personagem{
+    constructor(nome, raça, idade, regiao){
+        this.nome= nome
+        this.raça = raça
+        this.idade = idade
+        this.regiao = regiao
+        this.vida = 100
+    }
+}
+
+class classe extends personagem{
+    
+    constructor(nome, raça, idade, regiao, classe){
+        super(nome, raça, idade, regiao)
+        
+        this.classe = classe
+        this.ataque
+        this.defesa
+        this.mana
+    }
+    
+    atributos(classe){
+        if(classe == "paladino"){
+            this.ataque = 15
+            this.defesa = 25
+            this.mana = 5
+        }else if(classe == "mago"){
+            this.ataque = 5
+            this.defesa = 15
+            this.mana = 30
+        }
+    }
+}
+let persona1 = new classe("Kilua","Humano", 24, "Norte", "paladino")
+let persona2 = new classe("Soph","Humana", 36, "Leste", "mago")
+
+console.log(persona1)
+console.log(persona1.atributos("paladino"))
+console.log(persona2)
+console.log(persona2.atributos("mago"))
+
+
+
+
+
+
+</script>
+</html>

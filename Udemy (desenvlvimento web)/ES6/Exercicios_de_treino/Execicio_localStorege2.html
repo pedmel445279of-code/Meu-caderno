@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h3>Nome do produto:</h3>
+        <input type="text" id="nome" placeholder="Produto">
+        <h3>Preço do produto:</h3>
+        <input type="text" id="preco" placeholder="Preço">
+        <h3>Quantidade do produto:</h3>
+        <input type="text" id="qtd" placeholder="Quantidade"><br><br>
+
+        <button  name="entrada" id="Cadastro" onclick="cadastrar()"> Cadastrar produto</button><br><br>
+        <button  name="entrada" id="recuperar" onclick="recuperar()"> Recuopar dados do produto</button>
+    </div>
+</body>
+<script>
+    function cadastrar(){
+        class Produto{
+            constructor(){
+                this.Produto = document.getElementById('nome').value
+                this.Preço = document.getElementById('preco').value
+                this.Qauntidade = document.getElementById('qtd').value
+            }
+        }
+
+        let x = new Produto()
+
+            gravar(x)
+
+            alert("Dados salvo com sucesso!")
+    }
+
+    function gravar(x){
+        localStorage.setItem('cadastrar' , JSON.stringify(x))
+    }
+
+    function recuperar(){
+        let y = localStorage.getItem('cadastrar')
+
+        let dados = JSON.parse(y)
+
+        console.log(dados)
+
+        return dados
+        }
+</script>
+</html>

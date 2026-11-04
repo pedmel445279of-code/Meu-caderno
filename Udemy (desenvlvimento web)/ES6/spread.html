@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+
+    //Contexto spread
+       // O spread significa espalhar. Ele permite espalhar os elementos de um array ou as propriedades de um objeto em outro lugar.
+       
+
+    //striong
+    let tituloArtigo = "Como utilizar o operador rest/spread"
+    console.log(tituloArtigo)
+    console.log(...tituloArtigo) //Operador spread ele espalha a sthing
+    console.log([...tituloArtigo]) 
+
+   //arrays
+   let listaCursos1 = ["nodejs e mongoDB","ES6", "JavaScript", ] 
+   let listaCursos2 = ["miltiplataforma","python", "PHP", ] 
+   let listaCursosCompleto = ["MySQL","SQL", "Stripe", ...listaCursos1, ...listaCursos2]
+   
+   console.log(listaCursosCompleto)
+
+</script>
+</html>

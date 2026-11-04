@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /*
+        FUNÇÃO FACTORY
+    -Atraves do padrão de projeto Factory, podemos criar objetos sem a necessidade de instanciar uma classe.
+    -Também podemos implementar uma "Fabrica" para a criação em tempo de execução.
+    */
+
+    let bicicleta = {
+
+        cor: "Vermelha",
+        modelo: "Caloi",
+        marchas: 21,
+        pedalar(){
+            console.log("Está pedalando!")
+        }
+
+    }
+    let bicicleta2 = {
+
+        cor: "preta",
+        modelo: "Caloi",
+        marchas: 18,
+        pedalar(){
+            console.log("Está pedalando!")
+        }
+
+    }
+
+    console.log(bicicleta)
+    console.log(bicicleta2)
+
+    let bicicletasFactory = function(cor, modelo, marchas){
+        return {
+            cor: cor,
+            modelo: modelo,
+            marchas: marchas,
+            pedalar(){
+                console.log("Está pedalando!")
+            }
+        }
+    }
+
+    let bicicleta3 = bicicletasFactory("Azul", "Monark", 15)
+    let bicicleta4 = bicicletasFactory("Verde", "Specialized", 24)
+
+    console.log(bicicleta3)
+    console.log(bicicleta4)
+
+</script>
+
+</html>

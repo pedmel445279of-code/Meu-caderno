@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    /*let computador = ['Computador', 'Monitor', 'Teclado','Mause', 'Fones']
+
+    let [CPU, tela, teclas, ,rato,caixa,pede = 'Mause pede'] = computador
+    
+    console.log(CPU)
+    console.log(tela)
+    console.log(teclas)
+    console.log(rato)
+    console.log(caixa)
+    console.log(pede)
+
+    console.log(computador)*/
+
+   /* let funcionarios = [
+    'Carlos',
+    'Pedro',
+    'Mariana',
+    'João',
+    'Ana'
+]
+
+let [primeiro, , terceiro ,quarto, , sexto = 'Funcionario não encontrado'] = funcionarios
+
+    console.log(primeiro)
+    console.log(terceiro)
+    console.log(quarto)
+    console.log(sexto)*/
+
+    /*let vendas = [150, 230, 450, 120, 600, 780, 900];
+
+    let [primeiraVenda, segundaVenda, ...demaisVendas] = vendas
+
+    console.log(primeiraVenda);
+    console.log(segundaVenda);
+    console.log(demaisVendas);
+
+    let resultado = primeiraVenda + segundaVenda 
+
+    console.log(resultado)
+
+   */ 
+
+    let pedido = [
+    'Notebook',
+    3500,
+    2,
+    'Cartão de crédito',
+    'Aprovado'
+]
+    let status = [
+        'Processador: Intel I5 9400 \n',
+        'Placa de védeo: RTX 3070, 8 VRAM \n',
+        'Momória: 16 RAM\n',
+        'Fonte: 600W, FULL modular com PSC ativado\n',
+        'Armazenamento: SSD SATA 256GB\n',
+        'Armazenameto: HD SATA 500GB\n',
+        'Gabinete: Aquário\n',
+    ]
+
+    let [nomeProduto, preçoProduto, , pagamento,] = pedido
+
+    let [...peças] = status
+
+
+    console.log('Produto: ' + nomeProduto + '\n' +
+    'Preço do produto: ' + preçoProduto + '\n' +
+    'Forma de pagamento: ' + pagamento + '\n' +
+    'Peças do equipamento: ' + peças)
+</script>
+</html>

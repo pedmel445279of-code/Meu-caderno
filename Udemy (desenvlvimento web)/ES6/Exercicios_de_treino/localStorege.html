@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="nome" placeholder="Nome"><br><br>
+    <input type="number" id="idade" placeholder="Idade"><br><br>
+
+    <button onclick="cadastrar()">Cadastrar</button>
+    <button onclick="recuperar()">Recuperar dados</button>
+
+</body>
+    <script>
+        function cadastrar(){ //chave
+    
+            class Usuario{
+                constructor(){
+                    this.nome = document.getElementById('nome').value
+                    this.idade= document.getElementById('idade').value
+                }
+            }
+    
+            let dados = new Usuario()//valor 
+
+            gravar(dados) //Isso significa que o JavaScript processa as declarações de funções antes de executar o restante do código.
+            
+            alert("Usuário cadastrado com sucesso!")
+        }
+
+        function gravar(dados){
+            //Salvando os dados no navegador Utilizando de uma chave e um valor
+            localStorage.setItem('cadastrar',JSON.stringify(dados))
+        }
+        
+        function recuperar(){
+            let dados = localStorage.getItem('cadastrar')
+    
+            let usuario = JSON.parse(dados) //São os dados recuperados! 
+            
+            console.log(usuario)
+
+            return usuario 
+        }
+    </script>
+</html>
