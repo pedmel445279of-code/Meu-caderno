@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+</body>
+<script>
+    /*1. Transformando um Objeto JavaScript em JSON (Serialização)*/
+
+        // Um objeto normal do JavaScript
+        const usuario = {
+        nome: "Lucas",
+        idade: 30,
+        habilidades: ["JavaScript", "Git", "Node.js"],
+        ativo: true
+        };
+
+        // Convertendo o objeto JavaScript para uma string JSON
+        const jsonString = JSON.stringify(usuario);
+
+        console.log(jsonString);
+        // Saída (em formato de texto puro):
+        // {"nome":"Lucas","idade":30,"habilidades":["JavaScript","Git","Node.js"],"ativo":true}
+
+
+    //2. Transformando um texto JSON em Objeto JavaScript (Deserialização)
+
+        // Uma string contendo um JSON válido
+        const jsonTexto = '{"nome":"Ana","idade":25,"cidade":"Rio de Janeiro"}';
+
+        // Convertendo a string JSON para um objeto JavaScript real
+        const objetoUsuario = JSON.parse(jsonTexto);
+
+        // Agora você pode acessar as propriedades normalmente
+        console.log(objetoUsuario.nome);  // Saída: Ana
+        console.log(objetoUsuario.idade); // Saída: 25
+
+</script>
+</html>

@@ -17,21 +17,61 @@ function dados(){
                       this.descricao = descricao
                       this.valor = valor
                   }
-              }
-    //terceiro: criei a identidade com os parametros com os nomes das cariaveis
-              let despesa = new entradas(ano,mes,dia,tipo,descricao,valor)
-            
-              alert("Despesa salva com sucesso!")
 
-              gravar(despesa)
+                  validarDados(){
+                    for(let i in this ){
+                        if(this[i] == undefined || this[i] == "" || this[i] == null){
+                            return false
+                        }
+                    }
+                    return true
+                  }
+
+              }
+
+              class Bd{
+
+                constructor(){ //
+                    let id = localStorage.getItem('id')
+
+                    if(id === null){
+                        localStorage.setItem('id', 0)
+                    }
+                }
+
+                getProximoId (){
+                  let proximoId = localStorage.getItem('id') //null
+                  return parseInt(proximoId) + 1
+                  }
+                  
+                gravar(d){
+
+                    let id = this.getProximoId()
+                    localStorage.setItem(id /*Identifição do Objeto que queremos armazenar*/,
+                    JSON.stringify(d) /*O dado que queros armazenar*/)
+
+                    localStorage.setItem('id',id)
+                }
+            }
+            
+            let bd = new Bd()
+
+
+            //terceiro: criei a identidade com os parametros com os nomes das cariaveis
+            let despesa = new entradas(ano,mes,dia,tipo,descricao,valor)
+            
+            if(despesa.validarDados()){
+                console.log("Despesa salva com sucesso!")
+                alert('Dados Salvo com sucesso!')
+            } else {
+                console.log("Dados inválidos")
+            }
+            
+            bd.gravar(despesa)
+
 }
 
-    function gravar(d){
-
-        localStorage.setItem('despesa' /*Identifição do Objeto que queremos armazenar*/,
-             JSON.stringify(d) /*O dado que queros armazenar*/)
-
-    }
+    
 
 
 
