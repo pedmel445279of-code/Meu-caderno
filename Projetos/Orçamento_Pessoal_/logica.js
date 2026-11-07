@@ -52,6 +52,10 @@ function dados(){
 
                     localStorage.setItem('id',id)
                 }
+
+                recuperarTodosOsRegistros(){
+                    console.log('Estamos chegando até aqui')
+                }
             }
             
             let bd = new Bd()
@@ -69,7 +73,11 @@ function dados(){
             
             bd.gravar(despesa)
 
-}
+        }
+        
+        function carregaListaDespesas(){
+            bd.recuperarTodosOsRegistros()
+        }
 
     
 
