@@ -5,7 +5,6 @@
 
 		<!-- Bootstrap início -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="logica.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -15,10 +14,12 @@
     <!-- Font Awesome -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
+    <script src="app.js"></script>
 
 	</head>
 
-  <body onload="carregaListaDespesas()"> 
+  <body onload="carregaListaDespesas()">
+
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-5">
       <div class="container">
@@ -82,7 +83,7 @@
 
         <div class="col-md-6">
           <select class="form-control" id="tipo">
-            <option>Tipo</option>
+            <option value="">Tipo</option>
             <option value="1">Alimentação</option>
             <option value="2">Educação</option>
             <option value="3">Lazer</option>
@@ -122,12 +123,7 @@
             </thead>
 
             <tbody id="listaDespesas">
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
+               
             </tbody>
           </table>
         </div>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            color: white;
+            background-color: black;
+        }
+        .container-flex{
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid red;
+
+            
+            display: flex; /**/ 
+            /*flex-direction organiza os itens em colunas(column) ou alinhados(row), ainda existe o reverse aonde ele inverte a ordem.
+            row-recerse ou column-reverse
+            */ 
+            flex-direction: column; /*Um item abaixo do outro*/ 
+            /*flex-direction: row; Um item acima do outro*/ 
+
+            flex-wrap: wrap; /*Ele limita o tamanho do container alinhando os itens dentro dele */
+            /*flex-wrap: nowrap; Ele milite o tamano do container MAS NÂO alinha os itens dentro do mesmo*/
+        }
+        .container-flex > div{
+            border: 1px solid white;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Display flex</h1>
+
+    <div class="container-flex">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+        <div>04</div>
+        <div>05</div>
+        <div>06</div>
+        <div>07</div>
+        <div>08</div>
+        <div>09</div>
+    </div>
+</body>
+</html>
