@@ -10,20 +10,51 @@
             background-color: black;
         }
         .container-flex{
-            margin: 10px;
-            padding: 10px;
+            margin: 20px;
+            padding: 20px;
             border: 1px solid red;
+            height: 100px;
+            
 
             
             display: flex; /**/ 
             /*flex-direction organiza os itens em colunas(column) ou alinhados(row), ainda existe o reverse aonde ele inverte a ordem.
             row-recerse ou column-reverse
             */ 
-            flex-direction: column; /*Um item abaixo do outro*/ 
+            flex-direction: row; /*Um item abaixo do outro*/ 
             /*flex-direction: row; Um item acima do outro*/ 
 
             flex-wrap: wrap; /*Ele limita o tamanho do container alinhando os itens dentro dele */
             /*flex-wrap: nowrap; Ele milite o tamano do container MAS NÂO alinha os itens dentro do mesmo*/
+
+            /*flex-flow: column; Ajunta o wrap e o nowrap em colunas*/
+            /*flex-flow: row; Ajunta o wrap e o nowrap em linhas*/
+
+                /*ALINHAMENTO COM JUSTIFY CONTENT*/
+
+            /*justify-content:flex-start (padrão); Alinha os itens no início do container.*/
+            /*justify-content:flex-end ; Alinha os itens no final do container.*/
+            /*justify-content:center ; Centraliza todos os itens no meio do container.*/
+            /*justify-content:space-between ; Distribui os itens uniformemente.*/
+            /*justify-content:space-evenly; Distribui os itens com espaço perfeitamente igual entre eles e nas duas pontas.*/
+            /*justify-content:space-around; Distribui os itens com espaço igual ao redor de cada um.*/
+            
+            justify-content: space-between;
+
+               /*ALINHAMENTO COM ALIGN ITENS*/
+
+               /*Observarção: Se eu usar a row os itens ficam alinhados da esquerda pra direita
+                Se usar uma colunm os itens fica alinhado de cima para baixo.
+               */
+            
+            /*align-items: stretch; Estica os itens para preencher toda a altura do container*/
+            /*align-items: flex-start; Alinha os itens no topo (início) do container.*/
+            /*align-items: flex-end; Alinha os itens na base (fim) do container.*/
+            /*align-items: center ; Centraliza os itens verticalmente no meio do container.*/
+            /*align-items: ; Alinha os itens com base na linha base do texto dentro deles, garantindo que o texto fique nivelado mesmo se os tamanhos das fontes forem diferentes.*/
+               
+            align-items: flex-start;
+
         }
         .container-flex > div{
             border: 1px solid white;
