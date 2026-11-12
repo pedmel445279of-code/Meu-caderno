@@ -32,6 +32,8 @@
 
                 /*ALINHAMENTO COM JUSTIFY CONTENT*/
 
+                /*Observação: Se eu usar a justify-content os itens ficam alinhados da esquerda pra direita*/
+                
             /*justify-content:flex-start (padrão); Alinha os itens no início do container.*/
             /*justify-content:flex-end ; Alinha os itens no final do container.*/
             /*justify-content:center ; Centraliza todos os itens no meio do container.*/
@@ -43,8 +45,7 @@
 
                /*ALINHAMENTO COM ALIGN ITENS*/
 
-               /*Observarção: Se eu usar a row os itens ficam alinhados da esquerda pra direita
-                Se usar uma colunm os itens fica alinhado de cima para baixo.
+               /*Observarção: Se usar uma align-items os itens fica alinhado de cima para baixo.
                */
             
             /*align-items: stretch; Estica os itens para preencher toda a altura do container*/
@@ -53,12 +54,63 @@
             /*align-items: center ; Centraliza os itens verticalmente no meio do container.*/
             /*align-items: ; Alinha os itens com base na linha base do texto dentro deles, garantindo que o texto fique nivelado mesmo se os tamanhos das fontes forem diferentes.*/
                
-            align-items: flex-start;
-
+            align-items: center;
         }
+        .container-flex > .iten{
+
+                /*Alinhamento com Align Self*/
+
+                /*Observação: Alinha um iten endividual,longo do eixo transversal (o eixo cruzado, que é o eixo vertical quando o flex-direction é row*/
+            
+            /*
+                Align Self:auto; O padrão. Segue a mesma regra de alinhamento definida no container pai (align-items).
+                Align Self:flex-start; Cola no topo (no início do eixo cruzado).
+                Align Self:flex-end; Cola embaixo (no fim do eixo cruzado).
+                Align Self:center; Centraliza o item no meio do eixo cruzado.
+                Align Self:stretch; Estica o item de ponta a ponta para preencher todo o espaço disponível.
+                Align Self:baseline; Alinha pela linha base do texto, garantindo que as letras fiquem perfeitamente niveladas, mesmo com tamanhos de fonte diferentes.
+            */
+
+            align-self: flex-start;
+            
+            
+        }
+
+        .container-flex > .iten1{
+            align-self: flex-end;
+        }
+        .container-flex > .iten2{
+            align-self:flex-start;
+        }
+        .container-flex > .iten3{
+            align-self:flex-end ;
+        }
+
+
         .container-flex > div{
             border: 1px solid white;
+            
+            /*ALINHAMENTO COM FLEX-BASIS:*/
+            
+            /*Observação: flex-basis vai delimitar o tamanho do iten na horizontal:
+
+            flex-basis: tamanho em pixels ;
+            flex-basis: auto ou 0 ; deixa A Altura altomatica (seguindo o pai)*/
+            
+            flex-basis: 50px;
         }
+
+            /*FLEX-GROW
+
+            Observação: define a capacidade de um item crescer caso haja espaço livre sobrando no container flexível.
+
+            Como funciona (de forma simples)
+            Valor padrão: 0 (o item não cresce, mantém seu tamanho original).
+            Valores maiores que 0 (como 1, 2, 5): O item vai pegar o espaço vazio e crescer.
+
+            flex-grow: 1;
+
+        */
         
     </style>
 </head>
@@ -67,13 +119,13 @@
 
     <div class="container-flex">
         <div>01</div>
-        <div>02</div>
+        <div class="iten">02</div>
         <div>03</div>
-        <div>04</div>
-        <div>05</div>
-        <div>06</div>
+        <div class="iten1">04</div>
+        <div >05</div>
+        <div class="iten2">06</div>
         <div>07</div>
-        <div>08</div>
+        <div class="iten3">08</div>
         <div>09</div>
     </div>
 </body>
