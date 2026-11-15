@@ -111,6 +111,43 @@
             flex-grow: 1;
 
         */
+
+            /*ALINHAMENTO COM FLEX SHRINK:
+
+            flex-shrink: Controla quanto o item encolhe se faltar espaço.
+            A propriedade flex-shrink aceita números unitários (sem unidade de medida como px ou %).
+
+            .caixa-1 {
+            width: 250px;
+            flex-shrink: 1; Vai encolher normalmente 
+            }
+
+            .caixa-2 {
+            width: 250px;
+            flex-shrink: 0; Vai ignorar a falta de espaço e manter os 250px 
+            }
+
+            */
+
+            /*
+                ALINHAMENTO COM FLEX:
+
+            A propriedade abreviada flex é um atalho no CSS que serve para definir três propriedades do Flexbox de uma só vez: flex-grow (crescimento), flex-shrink (encolhimento) e flex-basis (tamanho base).
+
+                .elemento {
+                    flex: [flex-grow] [flex-shrink] [flex-basis];
+                    }
+
+            Barra lateral rígida: não cresce, não encolhe, tem 250px fixos 
+            .sidebar {
+            flex: 0 0 250px; 
+            }
+
+            Conteúdo principal: cresce e encolhe livremente para ocupar o resto 
+            .conteudo {
+            flex: 1;  Equivalente a flex: 1 1 0% 
+            }
+            */
         
     </style>
 </head>
